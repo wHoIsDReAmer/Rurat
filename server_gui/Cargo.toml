@@ -1,0 +1,26 @@
+[package]
+name = "server_gui"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[dependencies]
+egui = "0.19.0"
+eframe = "0.19.0"
+tokio = { version = "1.20.1",  features = ["rt", "full"] }
+image = "0.24.3"
+egui-toast = "0.3.0"
+
+[package.metadata.winres]
+FileDescription = "Rurat v1.0"
+LegalCopyright = "Copyright © 2022"
+ProductName = "Rurat"
+ProductVersion = "1.0"
